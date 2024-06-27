@@ -189,6 +189,7 @@ namespace BDDAutomation.PageObjects
             waitaBit();
 
             _driver.Navigate().Refresh();
+            Assert.True(workorderID.Displayed,"WorkOrder ID is not present in the list");
             string WOID = workorderID.Text.Trim();
             Thread.Sleep(1000);
             Console.WriteLine("WOID is:" + WOID);
